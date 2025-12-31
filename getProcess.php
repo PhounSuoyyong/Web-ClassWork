@@ -1,13 +1,15 @@
 <?php
-$firstName = $_GET['fname']; 
-$lastName = $_GET['lname'];
-$phone = $_GET['phonenumber'];
-$password = $_GET['password'];
-$Cpassword = $_GET['cpassword'];
+if(isset($_GET['fname'])){
+    $firstName = htmlspecialchars($_GET["fname"]);
+    $lastName = htmlspecialchars($_GET["lname"]);
+    $phoneNumber = htmlspecialchars($_GET["phonenumber"]);
+    $password = htmlspecialchars($_GET["password"]);
+    $Cpassword = htmlspecialchars($_GET["cpassword"]);
 
-echo "First Name: " . $firstName . "<br>";
-echo "Last Name: " . $lastName . "<br>";
-echo "Phone Number: " . $phone . "<br>";
-echo "Password: " . $password . "<br>";
-echo "Confirm Password: " . $Cpassword . "<br>";
+    echo "First Name: " . $firstName . "<br>";
+    echo "Last Name: " . $lastName . "<br>";
+    echo "Phone Number: " . $phoneNumber . "<br>";
+    echo "Password: " . $password . "<br>";
+    echo "Confirm Password: " . $Cpassword . "<br>";
+}
 ?>
